@@ -1,7 +1,7 @@
 <html>
 <head>
   <title>Vine House - Bird Map</title>
-  <script type="text/javascript" src="js/jquery.js"></script> 
+  <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/mals-up.js"></script> 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script type="text/javascript">
@@ -14,8 +14,32 @@
 		cleartypeNoBg:  true, // disable cleartype corrections
     pagerAnchorBuilder: function(idx, slide) {return '#nav li h3:eq(' +(idx)+ ') a';}
   });
+
    });
   </script>
+  <script type="text/javascript">
+$(document).ready(function() {
+// Tooltip only Text
+$('.addtooltip').hover(function(){
+        // Hover over code
+        var title = $(this).attr('title');
+        $(this).data('tipText', title).removeAttr('title');
+        $('<p class="tooltip"></p>')
+        .text(title)
+        .appendTo('body')
+        .fadeIn('slow');
+}, function() {
+        // Hover out code
+        $(this).attr('title', $(this).data('tipText'));
+        $('.tooltip').remove();
+}).mousemove(function(e) {
+        var mousex = e.pageX + 10; //Get X coordinates
+        var mousey = e.pageY + 10; //Get Y coordinates
+        $('.tooltip')
+        .css({ top: mousey, left: mousex })
+});
+});
+</script>
   <style>
     #mainwrap { width: 100%; max-width:1000px; overflow: hidden; border: 1px solid #ccc; margin: 0 auto; }
     #topyellow { background: #ffd800; height: 15px; }
@@ -64,6 +88,7 @@
     .copyrightinfo { clear: both; font-size: 0.7em; color: #242a64; margin-bottom: 0 !important; }
     .copyrightinfo a { color: #242a64; text-decoration: none;  }
     .copyrightinfo a:hover { text-decoration: underline;}
+    .tooltip { display:none; position:absolute; left: -20px; border:1px solid #333; background-color:#242a64; padding:10px; color:#ffd800; font-family: Verdana, Sans-serif; font-size:12px; }
     @media screen and (max-width: 690px) {
       .left-content, .right-content { width: 100%; }
       .birdmapslider, .slide { height: 1190px; }
@@ -251,25 +276,25 @@
  <h2>Select Bird:</h2>
  <ul id="nav">
   <li class="nav-swallow">
-    <h3><a href="javascript:void(0)">Swallow</a></h3>
+    <h3><a href="javascript:void(0)" class="addtooltip" title="Swallow">Swallow</a></h3>
   </li>
   <li class="nav-chaffinch">
-    <h3><a href="javascript:void(0)">Chaffinch</a></h3>
+    <h3><a href="javascript:void(0)" class="addtooltip" title="Chaffinch">Chaffinch</a></h3>
   </li>
   <li class="nav-turtledove">
-    <h3><a href="javascript:void(0)">Turtle Dove</a></h3>
+    <h3><a href="javascript:void(0)" class="addtooltip" title="Turtle Dove">Turtle Dove</a></h3>
   </li>
   <li class="nav-housemartin">
-    <h3><a href="javascript:void(0)">House Martin</a></h3>
+    <h3><a href="javascript:void(0)" class="addtooltip" title="House Martin">House Martin</a></h3>
   </li>
   <li class="nav-greenfinch">
-    <h3><a href="javascript:void(0)">Greenfinch</a></h3>
+    <h3><a href="javascript:void(0)" class="addtooltip" title="Greenfinch">Greenfinch</a></h3>
   </li>
   <li class="nav-robin">
-    <h3><a href="javascript:void(0)">Robin</a></h3>
+    <h3><a href="javascript:void(0)" class="addtooltip" title="Robin">Robin</a></h3>
   </li>
   <li class="nav-goldfinch">
-    <h3><a href="javascript:void(0)">Goldfinch</a></h3>
+    <h3><a href="javascript:void(0)" class="addtooltip" title="Goldfinch">Goldfinch</a></h3>
   </li>
 </ul>
 <p class="copyrightinfo">&copy; <a href="http://www.vinehousefarm.co.uk/" target="_blank">www.vinehousefarm.co.uk</a>
