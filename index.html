@@ -1,0 +1,280 @@
+<html>
+<head>
+  <title>Vine House - Bird Map</title>
+  <script type="text/javascript" src="js/jquery.js"></script> 
+  <script type="text/javascript" src="js/mals-up.js"></script> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+     jQuery('.birdmapslider').cycle({
+      fx: 'fade',
+      speed: 1000,
+      timeout: 20000,
+      pager: '#nav',
+		cleartypeNoBg:  true, // disable cleartype corrections
+    pagerAnchorBuilder: function(idx, slide) {return '#nav li h3:eq(' +(idx)+ ') a';}
+  });
+   });
+  </script>
+  <style>
+    #mainwrap { width: 100%; max-width:1000px; overflow: hidden; border: 1px solid #ccc; margin: 0 auto; }
+    #topyellow { background: #ffd800; height: 15px; }
+    .logo { position: relative; left: 15px; z-index: 999999 !important; }
+    .birdmapslider, .slide { width:100%; background: #80b2d5; height: 645px; }
+    .birdmapslider { font-family: Verdana, Sans-serif; float: left; overflow: hidden;  }
+    .birdmapslider .slide p { color: #fff; font-size: 0.7em; }
+    .left-content { float: left; width: 37%; height: 100%; background: #99c1dd; padding: 0 2% 2% 2%; box-sizing: border-box; }
+    .bird { position: relative; left: -20px; top: -162px; }
+    .slidecontent { position: relative; top: -240px; }
+    h2 { color: #242a64; font-weight: bold; margin: 10px 0; }
+    h3 { color: #ffd800; font-weight: bold; font-size: 0.8em; }
+    .right-content { .loat: left; width: 63%; background: #80b2d5; overflow: hidden; }
+    .right-content img { float: left; width: 710px; }
+    #nav-wrap { background: #ffd800; padding: 2%; box-sizing: border-box; clear: both; font-family: Verdana, Sans-serif; overflow: hidden;  }
+    #nav-wrap h2 { margin-bottom: 0; }
+    #nav { clear: both; padding: 0; margin: 0; }
+    #nav h3 { margin: 0; }
+    #nav li { display: inline-block; float: left; }
+    #nav li a { width: 125px; height: 125px; display: block; text-indent: -9999px; }
+    .nav-swallow a { background: url("images/icon-swallow.png") no-repeat; }
+    .nav-swallow a:hover { background: url("images/icon-swallow-hover.png") no-repeat; }
+    .nav-swallow .activeSlide { background: url("images/icon-swallow-active.png") no-repeat !important; }
+    .nav-chaffinch a { background: url("images/icon-chaffinch.png") no-repeat; }
+    .nav-chaffinch a:hover { background: url("images/icon-chaffinch-hover.png") no-repeat; }
+    .nav-chaffinch .activeSlide { background: url("images/icon-chaffinch-active.png") no-repeat !important; }
+    .nav-turtledove a { background: url("images/icon-turtle-dove.png") no-repeat; }
+    .nav-turtledove a:hover { background: url("images/icon-turtle-dove-hover.png") no-repeat; }
+    .nav-turtledove .activeSlide { background: url("images/icon-turtle-dove-active.png") no-repeat !important; }
+    .nav-housemartin a { background: url("images/icon-house-martin.png") no-repeat; }
+    .nav-housemartin a:hover { background: url("images/icon-house-martin-hover.png") no-repeat; }
+    .nav-housemartin .activeSlide { background: url("images/icon-house-martin-active.png") no-repeat !important; }
+    .nav-greenfinch a { background: url("images/icon-greenfinch.png") no-repeat; }
+    .nav-greenfinch a:hover { background: url("images/icon-greenfinch-hover.png") no-repeat; }
+    .nav-greenfinch .activeSlide { background: url("images/icon-greenfinch-active.png") no-repeat !important; }
+    .nav-robin a { background: url("images/icon-robin.png") no-repeat; }
+    .nav-robin a:hover { background: url("images/icon-robin-hover.png") no-repeat; }
+    .nav-robin .activeSlide { background: url("images/icon-robin-active.png") no-repeat !important; }
+    .nav-goldfinch a { background: url("images/icon-goldfinch.png") no-repeat; }
+    .nav-goldfinch a:hover { background: url("images/icon-goldfinch-hover.png") no-repeat; }
+    .nav-goldfinch .activeSlide { background: url("images/icon-goldfinch-active.png") no-repeat !important; }
+    .credit { color: #fff; margin-top: 40px; }
+    .credit a { color: #ffd800; text-decoration: none; font-size: 0.7em; }
+    .credit a:hover { color: #242a64;# }
+    .credit .photoinfo { font-style: italic; margin: 0; }
+    .copyrightinfo { clear: both; font-size: 0.7em; color: #242a64; margin-bottom: 0 !important; }
+    .copyrightinfo a { color: #242a64; text-decoration: none;  }
+    .copyrightinfo a:hover { text-decoration: underline;}
+    @media screen and (max-width: 690px) {
+      .left-content, .right-content { width: 100%; }
+      .birdmapslider, .slide { height: 1190px; }
+      .left-content { height: 630px; }
+    }
+    @media screen and (max-width: 480px) {
+       .birdmapslider, .slide { height: 1240px; }
+    }
+  </style>
+</head> 
+<body>
+  <div id="mainwrap">
+    <div id="topyellow"></div>
+    <div class="birdmapslider">
+      <div class="slide">
+        <div class="left-content">
+        <a href="http://www.vinehousefarm.co.uk/" target="_blank"><img class="logo" src="images/vine-house-logo.jpg" alt="Vine House Farm" /></a>
+        <img class="bird" src="images/bird-swallow.png" alt="Swallow">
+        <div class="slidecontent">
+        
+         <h2>Swallow</h2>
+         <h3>Migration Pattern:</h3>
+         <p>Arrive in the summer between late March &amp; mid-May &amp; return to Southern Africa in September &amp; October.</p>
+         <h3>What They Eat:</h3>
+         <p>Flying Insects (Except Bees &amp; Wasps).</p>
+         <h3>Features:</h3>
+         <p>Known for their longer outer tail feathers, streamlined body &amp; short but wide bills.</p>
+         <div class="credit">
+        <p class="photoinfo"><i class="fa fa-camera-retro"></i> Flying Barn Swallow Back</p>
+ <a href="https://www.flickr.com/photos/kei-miyamoto/7056623825" target="_blank">Katsura Miyamoto &copy;</a>
+<p class="photoinfo">*Image Edited</p>
+         </div>
+         </div>
+       </div>
+       <div class="right-content">
+        <img src="images/map-swallow.jpg" alt="Swallow Migration Map" />
+      </div>
+    </div>
+    <div class="slide">
+      <div class="left-content">
+      <a href="http://www.vinehousefarm.co.uk/" target="_blank"><img class="logo" src="images/vine-house-logo.jpg" alt="Vine House Farm" /></a>
+      <img class="bird" src="images/bird-chaffinch.png" alt="Chaffinch">
+      <div class="slidecontent">
+      
+       <h2>Chaffinch</h2>
+       <h3>Migration Pattern:</h3>
+       <p>Resident birds with migration occurring between September &amp; March from Western Europe &amp; Scandinavia.</p>
+       <h3>What They Eat:</h3>
+       <p>Insects, Seeds, Peanuts.</p>
+       <h3>Features:</h3>
+       <p>Both female &amp; male have distinctive white markings on their wings &amp; tail. Males tend to be more colourful with grey &amp; reddish feathers, while the females have a duller brown / greenish plume.</p>
+       <div class="credit">
+        <p class="photoinfo"><i class="fa fa-camera-retro"></i> Fringilla Coelebs</p>
+ <a href="https://commons.wikimedia.org/wiki/File:Fringilla_coelebs_-Lochwinnoch,_Renfrewshire,_Scotland_-flying-8.jpg" target="_blank">Mark Medcalf &copy;</a>
+<p class="photoinfo">*Image Edited</p>
+         </div>
+       </div>
+     </div>
+     <div class="right-content">
+      <img src="images/map-chaffinch.jpg" alt="Chaffinch Migration Map" />
+    </div>
+  </div>
+  <div class="slide">
+   <div class="left-content">
+   <a href="http://www.vinehousefarm.co.uk/" target="_blank"><img class="logo" src="images/vine-house-logo.jpg" alt="Vine House Farm" /></a>
+   <img class="bird" src="images/bird-turtle-dove.png" alt="Turtle Dove">
+   <div class="slidecontent">
+   
+       <h2>Turtle Dove</h2>
+       <h3>Migration Pattern:</h3>
+       <p>A visitor between April &amp; May to Southern &amp; Eastern England, returning to Africa in July.</p>
+       <h3>What They Eat:</h3>
+       <p>Seeds &amp; Grains.</p>
+       <h3>Features:</h3>
+       <p>Smaller than other doves &amp; brown in colour. Wedge shaped tail which is often dark with white tips.</p>
+       <div class="credit">
+        <p class="photoinfo"><i class="fa fa-camera-retro"></i> Turtle Dove - Streptopelia Turtur</p>
+ <a href="https://www.flickr.com/photos/pc_plod/7231421996/in/photolist-remPKZ-eZLJSJ-c21VPA" target="_blank">Tony Smith &copy;</a>
+<p class="photoinfo">*Image Edited</p>
+         </div>
+       </div>
+     </div>
+     <div class="right-content">
+      <img src="images/map-turtle-dove.jpg" alt="Turtle Dove Migration Map" />
+    </div>
+ </div>
+ <div class="slide">
+   <div class="left-content">
+   <a href="http://www.vinehousefarm.co.uk/" target="_blank"><img class="logo" src="images/vine-house-logo.jpg" alt="Vine House Farm" /></a>
+   <img class="bird" src="images/bird-house-martin.png" alt="House Martin">
+   <div class="slidecontent">
+   
+       <h2>House Martin</h2>
+       <h3>Migration Pattern:</h3>
+       <p>Visiting in the summer from Africa, they typically stay from mid-April - October returning to their resident continent for the winter months.</p>
+       <h3>What They Eat:</h3>
+       <p>Insects (Mainly Flies).</p>
+       <h3>Features:</h3>
+       <p>Small bird with bluish black feathers, white underbelly &amp; black chin. Most common features include their feathered feet &amp; forked tail.</p>
+       <div class="credit">
+        <p class="photoinfo"><i class="fa fa-camera-retro"></i> Hirondelle de fenetre / House Martin</p>
+ <a href="https://www.flickr.com/photos/jean-jacquesboujot/4928878864/" target="_blank">Jean-Jacques Boujot &copy;</a>
+<p class="photoinfo">*Image Edited</p>
+         </div>
+     </div>
+     </div>
+     <div class="right-content">
+      <img src="images/map-house-martin.jpg" alt="House Martin Migration Map" />
+    </div>
+ </div>
+ <div class="slide">
+   <div class="left-content">
+   <a href="http://www.vinehousefarm.co.uk/" target="_blank"><img class="logo" src="images/vine-house-logo.jpg" alt="Vine House Farm" /></a>
+   <img class="bird" src="images/bird-greenfinch.png" alt="Greenfinch">
+   <div class="slidecontent">
+   
+       <h2>Greenfinch</h2>
+       <h3>Migration Pattern:</h3>
+       <p>During winter, adults migrate from Scotland &amp; Northern England down South, as far as Europe. European birds arrive in the autumn to the East coast.</p>
+       <h3>What They Eat:</h3>
+       <p>Mixed Seed, Peanuts, Sunflower Seeds &amp; Hearts, Berries.</p>
+       <h3>Features:</h3>
+       <p>Males tend to be more bright green with yellow in the wings &amp; tails, while the females have a duller grey &amp; brown colour.</p>
+       <div class="credit">
+        <p class="photoinfo"><i class="fa fa-camera-retro"></i> Greenfinch Profile</p>
+ <a href="https://www.flickr.com/photos/76377775@N05/6934635784/in/photolist-bJKNCx-bEmCBz-bJKNst-bMGsAD-bvsqFq-byMPBW-bHXG1V-mdA1Uk-r3y78Z-bJnbLr-azJAgy-6tXh83-6tT9Br-bMGt76-6FAX5q-6tXgYq-6FAWK3-fGGsDj-qP1Xq" target="_blank">Keith Ellwood &copy;</a>
+<p class="photoinfo">*Image Edited</p>
+         </div>
+       </div>
+     </div>
+     <div class="right-content">
+      <img src="images/map-greenfinch.jpg" alt="Greenfinch Migration Map" />
+    </div>
+ </div>
+ <div class="slide">
+   <div class="left-content">
+   <a href="http://www.vinehousefarm.co.uk/" target="_blank"><img class="logo" src="images/vine-house-logo.jpg" alt="Vine House Farm" /></a>
+   <img class="bird" src="images/bird-robin.png" alt="Robin">
+   <div class="slidecontent">
+   
+       <h2>Robin</h2>
+       <h3>Migration Pattern:</h3>
+       <p>Mainly residential however some adult Robins migrate in winter to Spain &amp; Portugal.</p>
+       <h3>What They Eat:</h3>
+       <p>Sultanas, Oats, Suet Products, Mealworms &amp; Seed Mixes.</p>
+       <h3>Features:</h3>
+       <p>The most widely recognised bird internationally, the bright red breast of the Robin is unmistakeable as both male &amp; female birds have this feature. The small beak &amp; plump body of this bird make it the nation's favourite.</p>
+       <div class="credit">
+        <p class="photoinfo"><i class="fa fa-camera-retro"></i> Erithacus rubecula with cocked head</p>
+ <a href="https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg" target="_blank">Francis C. Franklin &copy;</a>
+<p class="photoinfo">*Image Edited</p>
+         </div>
+       </div>
+     </div>
+     <div class="right-content">
+      <img src="images/map-robin.jpg" alt="Robin Migration Map" />
+    </div>
+ </div>
+ <div class="slide">
+   <div class="left-content">
+   <a href="http://www.vinehousefarm.co.uk/" target="_blank"><img class="logo" src="images/vine-house-logo.jpg" alt="Vine House Farm" /></a>
+   <img class="bird" src="images/bird-goldfinch.png" alt="Goldfinch">
+   <div class="slidecontent">
+    
+       <h2>Goldfinch</h2>
+       <h3>Migration Pattern:</h3>
+       <p>Sporadic migration pattern unlike some other birds. Migrate to France &amp; Spain as well as other South-Western European countries. </p>
+       <h3>What They Eat:</h3>
+       <p>Sunflower Seeds &amp; Hearts, Niger Seeds, Thistles &amp; Dandelions.</p>
+       <h3>Features:</h3>
+       <p>Very colourful bird with a red face, black, white &amp; yellow wings. Their long, narrow beak helps them to gather food, especially from thistles &amp; birdfeeders.</p>
+       <div class="credit">
+        <p class="photoinfo"><i class="fa fa-camera-retro"></i> Goldfinch</p>
+ <a href="https://www.flickr.com/photos/franco_baresi/12273743346/in/photolist-jGA9hA-rirCj6-aqhfQy-dx67Hd-oLr1XE-pUSczo-7UUi1m-6egnzh-tcpars-r4FJcD-jEj8tK-e7r7jP-cCiAeA-4o9xtb-rirChc-f2p7fF-vknNUp-dVuF1t-e3LywM-eXSnm2-7XUQ3K-KAB14-tYF874-ucfKAW-oZdJB3-45yHz8-9Nz9Yu-cZ2EvY-9XCKaf-GmDXz-oGLpFF-orcgHv-ciFuQS-b4h6BV-nWu3T1-9VyMry-eEnhG7-4aJy6W-5SgFQT-oGLorr-6hwZ5p-rVgmuZ-nMxnmD-bYr9sJ-nhCVPi-buJVzb-nQRq7G-vEuXQN-w2kDau-bKggAn/" target="_blank">Francis C. Franklin &copy;</a>
+<p class="photoinfo">*Image Edited</p>
+         </div>
+     </div>
+     </div>
+     <div class="right-content">
+      <img src="images/map-goldfinch.jpg" alt="Goldfinch Migration Map" />
+    </div>
+ </div>  
+</div>
+<div id="nav-wrap">
+ <h2>Select Bird:</h2>
+ <ul id="nav">
+  <li class="nav-swallow">
+    <h3><a href="javascript:void(0)">Swallow</a></h3>
+  </li>
+  <li class="nav-chaffinch">
+    <h3><a href="javascript:void(0)">Chaffinch</a></h3>
+  </li>
+  <li class="nav-turtledove">
+    <h3><a href="javascript:void(0)">Turtle Dove</a></h3>
+  </li>
+  <li class="nav-housemartin">
+    <h3><a href="javascript:void(0)">House Martin</a></h3>
+  </li>
+  <li class="nav-greenfinch">
+    <h3><a href="javascript:void(0)">Greenfinch</a></h3>
+  </li>
+  <li class="nav-robin">
+    <h3><a href="javascript:void(0)">Robin</a></h3>
+  </li>
+  <li class="nav-goldfinch">
+    <h3><a href="javascript:void(0)">Goldfinch</a></h3>
+  </li>
+</ul>
+<p class="copyrightinfo">&copy; <a href="http://www.vinehousefarm.co.uk/" target="_blank">www.vinehousefarm.co.uk</a>
+</div>
+</div>
+</div>
+</body>
+</html>
